@@ -5,6 +5,8 @@ const kafka = new Kafka({
   brokers: ["localhost:9092"]
 });
 
+// This is code for consumer to recieve messages produced by the producer.
+
 const consumer = kafka.consumer({groupId: "my-app3"});
 
 async function main() {
