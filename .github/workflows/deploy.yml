@@ -26,17 +26,17 @@ jobs:
         push: true
         tags: mahesararslan/kafka:latest
 
-    # - name: Verify Pushed Image
-    #   run: docker pull mahesararslan/kafka:latest
+    - name: Verify Pushed Image
+      run: docker pull mahesararslan/kafka:latest
 
-    # - name: Deploy to EC2
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.SSH_HOST }}
-    #     username: ${{ secrets.SSH_USERNAME }}
-    #     key: ${{ secrets.SSH_KEY }}
-    #     script: |
-    #       sudo docker pull mahesararslan/kafka:latest
-    #       sudo docker stop kafka || true
-    #       sudo docker rm kafka || true
-    #       sudo docker run -d --name kafka -p 3005:3000 mahesararslan/kafka:latest
+    - name: Deploy to EC2
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.   }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          sudo docker pull mahesararslan/kafka:latest
+          sudo docker stop kafka || true
+          sudo docker rm kafka || true
+          sudo docker run -d --name kafka -p 3005:3000 mahesararslan/kafka:latest

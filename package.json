@@ -10,15 +10,18 @@
     "produce:user": "tsc -b && node ./dist/producer-user.js",
     "build": "tsc -b"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "kafkajs": "^2.2.4"
   }
 }
